@@ -1,3 +1,15 @@
+"sources": {
+  "os-vector": {
+    "type": "vector",
+    "tiles": [
+      "https://api.os.uk/maps/vector/v1/vts/tile/{z}/{x}/{y}.pbf?srs=3857&key=AEnJVjpZSFDKe6NxnIAoeQzF2CSl5btr"
+    ],
+    "minzoom": 0,
+    "maxzoom": 22
+  }
+}
+
+
 {
   "version": 8,
   "name": "Estate Minimal White",
