@@ -17,19 +17,15 @@
     {
       "id": "background",
       "type": "background",
-      "paint": {
-        "background-color": "#ffffff"
-      }
+      "paint": { "background-color": "#ffffff" }
     },
     {
-      "id": "water",
+      "id": "water-fill",
       "type": "fill",
       "source": "os-vector",
       "source-layer": "water",
       "minzoom": 0,
-      "paint": {
-        "fill-color": "#a6cee3"
-      }
+      "paint": { "fill-color": "#a6cee3" }
     },
     {
       "id": "water-line",
@@ -37,10 +33,7 @@
       "source": "os-vector",
       "source-layer": "water",
       "minzoom": 0,
-      "paint": {
-        "line-color": "#1f78b4",
-        "line-width": 1
-      }
+      "paint": { "line-color": "#1f78b4", "line-width": 1 }
     },
     {
       "id": "roads",
@@ -71,7 +64,7 @@
       }
     },
     {
-      "id": "boundary-lines",
+      "id": "boundaries",
       "type": "line",
       "source": "os-vector",
       "source-layer": "boundary",
