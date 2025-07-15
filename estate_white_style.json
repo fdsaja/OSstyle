@@ -1,22 +1,14 @@
-"sources": {
-  "os-vector": {
-    "type": "vector",
-    "tiles": [
-      "https://api.os.uk/maps/vector/v1/vts/tile/{z}/{x}/{y}.pbf?srs=3857&key=AEnJVjpZSFDKe6NxnIAoeQzF2CSl5btr"
-    ],
-    "minzoom": 0,
-    "maxzoom": 22
-  }
-}
-
-
 {
   "version": 8,
   "name": "Estate Minimal White",
   "sources": {
     "os-vector": {
       "type": "vector",
-      "url": "https://api.os.uk/maps/vector/v1/vts/resources/index.json?key=AEnJVjpZSFDKe6NxnIAoeQzF2CSl5btr"
+      "tiles": [
+        "https://api.os.uk/maps/vector/v1/vts/tile/{z}/{x}/{y}.pbf?srs=3857&key=AEnJVjpZSFDKe6NxnIAoeQzF2CSl5btr"
+      ],
+      "minzoom": 0,
+      "maxzoom": 22
     }
   },
   "sprite": "https://api.os.uk/maps/vector/v1/vts/resources/sprites/sprite",
@@ -25,7 +17,9 @@
     {
       "id": "background",
       "type": "background",
-      "paint": { "background-color": "#ffffff" }
+      "paint": {
+        "background-color": "#ffffff"
+      }
     },
     {
       "id": "water",
@@ -33,7 +27,9 @@
       "source": "os-vector",
       "source-layer": "water",
       "minzoom": 0,
-      "paint": { "fill-color": "#a6cee3" }
+      "paint": {
+        "fill-color": "#a6cee3"
+      }
     },
     {
       "id": "water-line",
@@ -41,7 +37,10 @@
       "source": "os-vector",
       "source-layer": "water",
       "minzoom": 0,
-      "paint": { "line-color": "#1f78b4", "line-width": 1 }
+      "paint": {
+        "line-color": "#1f78b4",
+        "line-width": 1
+      }
     },
     {
       "id": "roads",
@@ -49,7 +48,16 @@
       "source": "os-vector",
       "source-layer": "road",
       "minzoom": 0,
-      "paint": { "line-color": "#757575", "line-width": { "base": 1, "stops": [[5, 0.5], [12, 2]] } }
+      "paint": {
+        "line-color": "#757575",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [5, 0.5],
+            [12, 2]
+          ]
+        }
+      }
     },
     {
       "id": "buildings",
@@ -57,7 +65,10 @@
       "source": "os-vector",
       "source-layer": "building",
       "minzoom": 0,
-      "paint": { "fill-color": "#d9d9d9", "fill-outline-color": "#000000" }
+      "paint": {
+        "fill-color": "#d9d9d9",
+        "fill-outline-color": "#000000"
+      }
     },
     {
       "id": "boundary-lines",
@@ -65,7 +76,11 @@
       "source": "os-vector",
       "source-layer": "boundary",
       "minzoom": 0,
-      "paint": { "line-color": "#000000", "line-width": 1, "line-dasharray": [2,2] }
+      "paint": {
+        "line-color": "#000000",
+        "line-width": 1,
+        "line-dasharray": [2, 2]
+      }
     },
     {
       "id": "labels",
