@@ -1,0 +1,75 @@
+{
+  "version": 8,
+  "name": "Estate Minimal White",
+  "sources": {
+    "os-vector": {
+      "type": "vector",
+      "url": "https://api.os.uk/maps/vector/v1/vts/resources/index.json?key=AEnJVjpZSFDKe6NxnIAoeQzF2CSl5btr"
+    }
+  },
+  "sprite": "https://api.os.uk/maps/vector/v1/vts/resources/sprites/sprite",
+  "glyphs": "https://api.os.uk/maps/vector/v1/vts/resources/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": { "background-color": "#ffffff" }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "os-vector",
+      "source-layer": "water",
+      "minzoom": 0,
+      "paint": { "fill-color": "#a6cee3" }
+    },
+    {
+      "id": "water-line",
+      "type": "line",
+      "source": "os-vector",
+      "source-layer": "water",
+      "minzoom": 0,
+      "paint": { "line-color": "#1f78b4", "line-width": 1 }
+    },
+    {
+      "id": "roads",
+      "type": "line",
+      "source": "os-vector",
+      "source-layer": "road",
+      "minzoom": 0,
+      "paint": { "line-color": "#757575", "line-width": { "base": 1, "stops": [[5, 0.5], [12, 2]] } }
+    },
+    {
+      "id": "buildings",
+      "type": "fill",
+      "source": "os-vector",
+      "source-layer": "building",
+      "minzoom": 0,
+      "paint": { "fill-color": "#d9d9d9", "fill-outline-color": "#000000" }
+    },
+    {
+      "id": "boundary-lines",
+      "type": "line",
+      "source": "os-vector",
+      "source-layer": "boundary",
+      "minzoom": 0,
+      "paint": { "line-color": "#000000", "line-width": 1, "line-dasharray": [2,2] }
+    },
+    {
+      "id": "labels",
+      "type": "symbol",
+      "source": "os-vector",
+      "source-layer": "place_label",
+      "minzoom": 8,
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
+    }
+  ]
+}
